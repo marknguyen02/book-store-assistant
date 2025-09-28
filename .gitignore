@@ -1,4 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environments
+.venv/
 .env
 
-notebooks/
+# Logs
+logs/
+*.log
+*.pid
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Docs
+docs/_build/
+
+# Data & Models
 data/
+notebooks/
