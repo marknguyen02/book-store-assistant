@@ -26,6 +26,6 @@ lookup_chain = RunnableWithMessageHistory(
     history_messages_key="history",
 )
 
-def lookup_book_data(request: str) -> str:
+def lookup_book_data(request):
     response = lookup_chain.invoke({"input": request})
     return response['output']

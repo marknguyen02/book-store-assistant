@@ -2,7 +2,7 @@ from langchain_google_genai import (
     ChatGoogleGenerativeAI,
     GoogleGenerativeAIEmbeddings
 )
-from langchain_ollama import OllamaLLM
+# from langchain_ollama import OllamaLLM
 from config import GOOGLE_API_KEY
 
 google_text_embedding_model = GoogleGenerativeAIEmbeddings(
@@ -10,10 +10,10 @@ google_text_embedding_model = GoogleGenerativeAIEmbeddings(
     model="models/text-embedding-004"
 )
 
-ollama_llm = OllamaLLM(
-    model="llama3.2:latest",
-    temperature=0
-)
+# ollama_llm = OllamaLLM(
+#     model="llama3.2:latest",
+#     temperature=0
+# )
 
 def get_google_chat_llm(temperature):
     return ChatGoogleGenerativeAI(

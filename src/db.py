@@ -1,6 +1,7 @@
 from langchain_community.utilities import SQLDatabase
 from qdrant_client import QdrantClient
 from langchain_qdrant import QdrantVectorStore
+import psycopg2
 from llm import google_text_embedding_model
 from config import (
     POSTGRES_USER,
@@ -22,6 +23,14 @@ vectorstore = QdrantVectorStore(
     client=client,
     collection_name=QDRANT_COLLECTION_NAME,
     embedding=google_text_embedding_model
+)
+
+db_conn = psycopg2.connect(
+    host=POSTGRES_HOST,
+    port=POSTGRES_PORT,
+    user=POSTGRES_USER,
+    password=POSTGRES_PASSWORD,
+    dbname=POSTGRES_DB
 )
 
 def get_qdrant_retriever(k):
