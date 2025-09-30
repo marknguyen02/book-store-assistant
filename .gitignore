@@ -21,10 +21,6 @@ logs/
 .vscode/
 .idea/
 
-# Docker
-docker-compose.override.yml
-.dockerignore
-
 # Docs
 docs/_build/
 
