@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.schema import AIMessage, HumanMessage, SystemMessage
 
 from llm import get_google_chat_llm
-from sers import check_order_validity, insert_order_to_db 
+from db import check_order_validity, insert_order_to_db 
 
 REQUIRE_FIELDS = ["customer_name", "phone", "address", "book_id", "quantity", "confirmed"]
 
