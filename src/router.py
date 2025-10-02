@@ -1,8 +1,10 @@
-from tasks.intent_classifier import classify_task
-from tasks.lookup import lookup_book_data
-from tasks.recommend import get_recommendation
-from tasks.order import handle_order
-from tasks.fallback import handle_fallback
+from tasks import (
+    classify_task,
+    lookup_book_data,
+    get_recommendation,
+    handle_order,
+    handle_fallback
+)
 
 def handle_user_request(request, history):
     task = classify_task(request)
